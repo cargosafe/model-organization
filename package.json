@@ -1,33 +1,22 @@
 {
   "name": "model-organization",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Model that's used with the organization-API",
   "main": "model.js",
   "private": true,
-  "scripts": {
-    "test": "make test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/cargosafe/model-organization"
-  },
-  "keywords": [
-    "model",
-    "organizations",
-    "client",
-    "server"
-  ],
+  "scripts": { "test": "make test" },
+  "repository": { "type": "git", "url": "git://github.com/cargosafe/model-organization" },
+  "keywords": ["model", "organizations", "client", "server"],
   "author": "Henrik Kjelsberg",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cargosafe/model-organization/issues"
-  },
+  "bugs": { "url": "https://github.com/cargosafe/model-organization/issues" },
   "homepage": "https://cargosafe.github.io/model-organization",
   "dependencies": {
-    "is-email": "~0.1.1",
-    "is-url": "~1.0.0",
     "model": "git://github.com/component/model",
-    "model-timestamps": "git://github.com/component/model-timestamps"
+    "model-timestamps": "git://github.com/component/model-timestamps",
+    "model-csrf": "git://github.com/segmentio/model-csrf",
+    "is-email": "git://github.com/segmentio/is-email",
+    "is-url": "git://github.com/segmentio/is-url"
   },
   "devDependencies": {
     "component": "~0.19.5",

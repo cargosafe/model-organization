@@ -3,12 +3,7 @@
   "repo": "cargosafe/model-organization",
   "description": "Model that's used with the organization-API",
   "version": "0.0.1",
-  "keywords": [
-    "model",
-    "organizations",
-    "client",
-    "server"
-  ],
+  "keywords": ["model", "organizations", "client", "server"],
   "dependencies": {
     "segmentio/is-email": "*",
     "segmentio/is-url": "*",
@@ -19,8 +14,5 @@
   "development": {},
   "license": "MIT",
   "main": "model.js",
-  "scripts": [
-    "model.js"
-  ],
-  "remotes": []
+  "scripts": ["model.js"]
 }

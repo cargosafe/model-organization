@@ -1,6 +1,6 @@
 
-COMPONENT=node_modules/.bin/component
-MOCHA=node_modules/.bin/mocha
+COMPONENT = node_modules/.bin/component
+MOCHA = node_modules/.bin/mocha
 
 
 build: components model.js
@@ -16,7 +16,6 @@ test:
 		--harmony \
 		--bail \
 		test.js
-
 
 clean:
 	rm -fr build components
