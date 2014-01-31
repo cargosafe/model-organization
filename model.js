@@ -7,7 +7,7 @@ var model = require('model');
 var isEmail = require('is-email');
 var isUrl = require('is-url');
 var timestamps = require('model-timestamps');
-var csrf = require('model-csrf');
+var csrf = require('model-csrf')();
 
 /**
  * Phone-number validation.
@@ -24,10 +24,9 @@ function isPhone(str){
  * @see https://github.com/component/model
  */
 
-var Organization = module.exports = model('Organization')
+var Org = module.exports = model('Org')
   .use(csrf)
   .use(timestamps)
-  .route('/api/orgs/')
   .attr('name', {required: true, type: 'string'})
   .attr('photo', {validate: isUrl})
   .attr('email', {required: true, validate: isEmail})

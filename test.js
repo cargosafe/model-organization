@@ -3,35 +3,30 @@
  * Test dependencies.
  */
 
-var Organization = require('./model');
+window = {};
+window._csrf = 'some token';
+var Org = require('./model');
 
-describe('Organization', function(){
+describe('Org', function(){
   var org;
 
-  before(function(done){
-    org = new Organization({
+  it('should require a CSRF-token', function(done){
+    org = new Org({
       "name": "cargosafe",
-      "email": "mail@cargosafe.com",
-      "token": "No cross-site scripting bull"
+      "email": "mail@cargosafe.com"
     });
     done();
   });
 
-  it('should be located at /api/orgs', function(done){
-    Organization.url().should.be('/api/orgs');
+  it('should be located at /orgs', function(done){
+    Org.url().should.be.startWith('/orgs');
     done();
   });
 
-  it('should have a `created_at` timestamp', function(done){
+  it('should be timestamped', function(done){
     org.save(function(err){
       org.created_at().should.be.instanceof(Date);
-      done();
-    });
-  });
-
-  it('should have a csrf-token', function(done){
-    org.save(function(err){
-      org.token().should.not.be.empty;
+      org.updated_at().should.be.instanceof(Date);
       done();
     });
   });
