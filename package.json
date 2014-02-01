@@ -4,12 +4,24 @@
   "description": "Model that's used with the organization-API",
   "main": "model.js",
   "private": true,
-  "scripts": { "test": "make test" },
-  "repository": { "type": "git", "url": "git://github.com/cargosafe/model-organization" },
-  "keywords": ["model", "organizations", "client", "server"],
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/cargosafe/model-organization"
+  },
+  "keywords": [
+    "model",
+    "organizations",
+    "client",
+    "server"
+  ],
   "author": "Henrik Kjelsberg",
   "license": "MIT",
-  "bugs": { "url": "https://github.com/cargosafe/model-organization/issues" },
+  "bugs": {
+    "url": "https://github.com/cargosafe/model-organization/issues"
+  },
   "homepage": "https://cargosafe.github.io/model-organization",
   "dependencies": {
     "model": "git://github.com/component/model",

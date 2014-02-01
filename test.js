@@ -12,7 +12,8 @@ describe('Org', function(){
 
   it('should require a CSRF-token', function(done){
     org = new Org({
-      "name": "cargosafe",
+      "slug": "cargosafe",
+      "name": "Cargosafe Systems A.S.",
       "email": "mail@cargosafe.com"
     });
     done();
@@ -29,6 +30,11 @@ describe('Org', function(){
       org.updated_at().should.be.instanceof(Date);
       done();
     });
+  });
+
+  it('should have a slug', function(done){
+    org.slug().should.be.exactly('cargosafe');
+    done();
   });
 
 });
