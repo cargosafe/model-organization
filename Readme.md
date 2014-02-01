@@ -11,10 +11,11 @@
 
   or [npm(1)](//nodejs.org):
 
+    $ npm install cargosafe/model-organization
+
 ## API
 
 ```javascript
-// window._csrf has to contain a token
 // The fields below are all required
 
 var org = new Org({

@@ -3,14 +3,12 @@
  * Test dependencies.
  */
 
-window = {};
-window._csrf = 'some token';
 var Org = require('./model');
 
 describe('Org', function(){
   var org;
 
-  it('should require a CSRF-token', function(done){
+  before(function(done){
     org = new Org({
       "slug": "cargosafe",
       "name": "Cargosafe Systems A.S.",
