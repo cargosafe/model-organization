@@ -19,8 +19,9 @@
 // The fields below are all required
 
 var org = new Org({
-  "name": "John Doe",
-  "email": "john@doe.com"
+  "oilers",
+  "name": "Oil company",
+  "email": "some@oil.com"
 });
 
 // Save, will send a request to the API
